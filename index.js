@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'nullbase-input'
+  name: 'nullbase-select'
 };

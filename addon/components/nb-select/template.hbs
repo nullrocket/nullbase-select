@@ -1,0 +1,15 @@
+{{nb-select-display  type="text" value=display icon=icon menuIcon=menuIcon hint=hint label=label error=error showErrors=showErrors}}
+{{#nb-select-dropdown closeDropDown=(action "closeDropDown")}}
+    {{#if hasBlock}}
+        {{#each displayOptions as | option|}}
+            {{yield option  }}
+        {{/each}}
+
+    {{else}}
+        {{#each displayOptions as | option|}}
+            {{nb-select-option value=option.value display=option.display selected=option.selected onSelectOption=(action "onSelectOption" option.value) }}
+        {{/each}}
+
+    {{/if}}
+
+{{/nb-select-dropdown}}

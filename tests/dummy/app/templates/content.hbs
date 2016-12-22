@@ -1,0 +1,31 @@
+{{#nb-scroll-panel
+scrollingX=false
+scrollingY= true
+animating=true
+bouncing  = true
+locking = false
+
+}}
+    <div class="content-wrapper elevation-1dp" style="margin:24px;background:white;padding:24px;">
+        <h2>Examples</h2>
+      <h3>Single Line Inputs</h3>
+        <div style="width:350px;">
+            <div style="margin-bottom:8px;">
+            {{#nb-select as |option  icon | }}
+
+               <div>{{option.value}}{{option.display}}</div>
+            {{/nb-select}}
+            </div>
+
+        </div>
+
+        <div style="width:350px;">
+            <div style="margin-bottom:8px;">
+                {{nb-select label="garg" value=appState.selectValue onSelectOption="onSelectOption" error="bobbly" showErrors=false}}
+
+            </div>
+
+        </div>
+    </div>
+
+{{/nb-scroll-panel}}

@@ -1,4 +1,4 @@
-# Nullbase-input
+# nullbase-select
 
 This README outlines the details of collaborating on this Ember addon.
 
