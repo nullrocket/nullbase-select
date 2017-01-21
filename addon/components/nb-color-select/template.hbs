@@ -1,5 +1,5 @@
-{{nb-select-display  type="text" value=display icon=icon menuIcon=menuIcon hint=hint label=label error=error showErrors=showErrors}}
-{{#nb-select-dropdown closeDropDown=(action "closeDropDown")}}
+{{nb-color-select-display  type="text" value=display icon=icon menuIcon=menuIcon hint=hint label=label error=error showErrors=showErrors}}
+{{#nb-color-select-dropdown closeDropDown=(action "closeDropDown") useNativeScroll=useNativeScroll}}
     {{#if hasBlock}}
         {{#each displayOptions as | option|}}
             {{yield option  }}
@@ -12,4 +12,4 @@
 
     {{/if}}
 
-{{/nb-select-dropdown}}
+{{/nb-color-select-dropdown}}

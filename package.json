@@ -1,6 +1,6 @@
 {
   "name": "nullbase-select",
-  "version": "0.0.0-alpha",
+  "version": "0.0.1-alpha",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -37,11 +37,11 @@
     "ember-resolver": "^2.0.3",
     "ember-route-action-helper": "2.0.0",
     "loader.js": "^4.0.1",
-    "nullbase-basic-layout": "https://github.com/nullrocket/nullbase-basic-layout.git#0.0.0-alpha",
+    "nullbase-basic-layout": "https://github.com/nullrocket/nullbase-basic-layout.git#0.0.1-alpha",
     "nullbase-button": "https://github.com/nullrocket/nullbase-button.git#0.0.0-alpha",
-    "nullbase-checkbox": "https://github.com/nullrocket/nullbase-checkbox.git#0.0.0-alpha",
-    "nullbase-scroll-panel": "https://github.com/nullrocket/nullbase-scroll-panel.git#0.0.0-alpha",
-    "nullbase-select": "https://github.com/nullrocket/nullbase-select.git#0.0.0-alpha"
+    "nullbase-checkbox": "https://github.com/nullrocket/nullbase-checkbox.git#0.0.2-alpha",
+    "nullbase-scroll-panel": "https://github.com/nullrocket/nullbase-scroll-panel.git#0.0.0-alpha"
+
   },
   "keywords": [
     "ember-addon"
@@ -55,7 +55,8 @@
     "focus-trap": "^2.1.0",
     "lodash": "^4.16.3",
     "nullbase-gestures": "https://github.com/nullrocket/nullbase-gestures.git#0.0.0-alpha",
-    "nullbase-theme-service": "https://github.com/nullrocket/nullbase-theme-service.git#0.0.0-alpha"
+    "nullbase-theme-service": "https://github.com/nullrocket/nullbase-theme-service.git#0.0.1-alpha",
+    "nullbase-scroll-panel": "https://github.com/nullrocket/nullbase-scroll-panel.git#0.0.1-alpha"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

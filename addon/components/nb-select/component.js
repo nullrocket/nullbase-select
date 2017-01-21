@@ -20,7 +20,7 @@ export default Ember.Component.extend(ThemedComponent, {
   classNames: [ 'nb-select' ],
   parentFocusTrap: null,
   icon: "",
-
+  optionComponent:'nb-select-option',
   init(){
     this._super(...arguments);
 
