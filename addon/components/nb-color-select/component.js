@@ -383,7 +383,7 @@ export default Ember.Component.extend(ThemedComponent, {
   willDestroyElement(){
    
     $(this.get('tetherObject').element).appendTo(this.get('element'));
-
+    $(window).off('resize',this.resize);
 
     this.get('tetherObject').destroy();
   },
@@ -393,8 +393,9 @@ export default Ember.Component.extend(ThemedComponent, {
     self.$('.nb-color-select-drop-down').width(self.$('.input-wrapper').width());
     self.$('.nb-color-select-drop-down').css('max-height','500px').css('min-height','400px');
     var $dropDown = self.$('.nb-color-select-drop-down');
+    console.log([10,10,$('body').height() -10,$('body').width()-10]);
     this.set('dropDown', $dropDown);
-    var tetherObject = new Tether({
+    var options = {
       element: self.$('.nb-color-select-drop-down'),
       target: self.$('.input-wrapper'),
       attachment: 'top left',
@@ -402,15 +403,17 @@ export default Ember.Component.extend(ThemedComponent, {
       //    offset: side ==="right" ? "0 "+width+"px" :"0 0",
       optimizations: {
 
-        gpu: false
+        gpu: true
       },
       constraints: [
         {
-          to: 'scrollParent',
-          attachment: 'both'
+          to: [10,10,$('body').width() -10,$('body').height()-10],   //''scrollParent',
+          attachment: 'both',
+          pin:true
         }
       ]
-    });
+    };
+    var tetherObject = new Tether(options);
 
     this.set('tetherObject', tetherObject);
 
@@ -462,8 +465,17 @@ export default Ember.Component.extend(ThemedComponent, {
       }
 
     });
+  this.resize = function(){
 
-
+    self.get('tetherObject').setOptions(_.extend(options,{constraints: [
+      {
+        to: [10,10,$('body').width() -10,$('body').height()-10],   //''scrollParent',
+        attachment: 'both',
+        pin:true
+      }
+    ]}));
+  };
+  $(window).on('resize',this.resize);
     gestures.addEventListener(this.get('element'), 'tap', this._tap);
 
   }
