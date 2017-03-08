@@ -1,6 +1,6 @@
 {
   "name": "nullbase-select",
-  "version": "0.0.6-alpha",
+  "version": "0.0.8-alpha",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -54,9 +54,9 @@
     "ember-truth-helpers": "1.2.0",
     "focus-trap": "^2.1.0",
     "lodash": "^4.16.3",
-    "nullbase-gestures": "https://github.com/nullrocket/nullbase-gestures.git#0.0.0-alpha",
-    "nullbase-theme-service": "https://github.com/nullrocket/nullbase-theme-service.git#0.0.3-alpha",
-    "nullbase-scroll-panel": "https://github.com/nullrocket/nullbase-scroll-panel.git#0.0.3-alpha"
+    "nullbase-gestures": "https://github.com/nullrocket/nullbase-gestures.git",
+    "nullbase-theme-service": "https://github.com/nullrocket/nullbase-theme-service.git",
+    "nullbase-scroll-panel": "https://github.com/nullrocket/nullbase-scroll-panel.git"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

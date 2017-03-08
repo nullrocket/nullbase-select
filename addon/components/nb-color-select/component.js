@@ -393,7 +393,6 @@ export default Ember.Component.extend(ThemedComponent, {
     self.$('.nb-color-select-drop-down').width(self.$('.input-wrapper').width());
     self.$('.nb-color-select-drop-down').css('max-height','500px').css('min-height','400px');
     var $dropDown = self.$('.nb-color-select-drop-down');
-    console.log([10,10,$('body').height() -10,$('body').width()-10]);
     this.set('dropDown', $dropDown);
     var options = {
       element: self.$('.nb-color-select-drop-down'),
